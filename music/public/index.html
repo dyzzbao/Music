@@ -67,13 +67,25 @@
        注意：兼容浏览器版本在.browserslistrc中设置 
        <.browserslistrc
        > 1%
-      last 2 versions
-      not dead
-      改为：
-      ie >= 8
-      Firefox >= 3.5
-      chrome >= 35
-      opera >= 11.5>
+       last 2 versions
+       not dead
+       改为：
+       ie >= 8
+       Firefox >= 3.5
+       chrome >= 35
+       opera >= 11.5>
+      
+       5 借助fastclick解决移动端100~300ms的点击事件延迟问题
+       5-1 npm install fastclick
+       5-2 main.js添加
+          import fastclick from 'fastclick'
+          fastclick.attach(document.body)
+       
+       6 初始化默认全局样式 
+       6-1 src/assets目录下新建css目录
+       6-2 main.js添加：
+        import './assets/css/base.scss'
+       注意点：在实际开发中，我们不希望字体大小随着屏幕尺寸的变化而变化，由于我们是通过视口缩放来适配移动端，因此直接设置字体大小没有效果，
       -->
 
 </head>
