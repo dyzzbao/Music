@@ -13,10 +13,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/css/variable";
+@import "../assets/css/mixin";
 .header {
 	width: 100%;
 	height: 100%;
-	background: #f00;
+	// background: #f00;
+	@include bg_color();
 	display: flex;
 	justify-content: space-between;
 	.header-left,
